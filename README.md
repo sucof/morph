@@ -13,12 +13,12 @@ You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
 
 ### Installation and Usage
 
-1. 安装Windbgx86/x64和MSECExtensions !exploitable插件。
+1.安装Windbgx86/x64和MSECExtensions !exploitable插件。
 
 > 注意：需要在Windbg中提前测试load msec.dll是否成功，若出现Can't Load Library的错误，则需要安装Visual C++ Redistributable 2008/2012。
 
 
-2. 将Windbg目录下的cdb.exe设置为默认即时调试器：
+2.将Windbg目录下的cdb.exe设置为默认即时调试器：
 
 > cdb.exe -iaec "-logo c:/log.txt -c \"!load msec.dll;!exploitable -v;\""
 

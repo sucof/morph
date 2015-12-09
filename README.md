@@ -1,13 +1,6 @@
 # About
 
-            __________              ____  __    __
-           /  __  __  \____  ____  / __ \/ /   / /
-          /  / / / /  / __ \/  __\/ /_/ / /___/ /
-         /  / / / /  / /_/ /  /  /  ___/  ___  /
-         \_/  \/  \_/\____/\_/   \_/   \_/  /_/
-
-'Morph' is an open source browser fuzzing framework written by Walkerfuz of Taurus Security.Morph provides an automated way to fuzz a browser, like Internet Explorer, Firefox, Chrome, etc.
-You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
+Morph is an open source browser fuzzing framework written by Walkerfuz of Taurus Security.It provides an automated way to fuzz a browser, like IE, Firefox, Chrome, etc.You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
 
 ### Features
 
@@ -18,9 +11,10 @@ You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
 
 1. 安装Windbgx86/x64和MSECExtensions !exploitable插件。
 
-> 注意：需要Windbg测试load msec.dll是否成功，若出现Can't Load Library的错误，则需要安装Visual C++ Redistributable 2008/2012。
+> 注意：需要在Windbg中提前测试load msec.dll是否成功，若出现Can't Load Library的错误，则需要安装Visual C++ Redistributable 2008/2012。
 
-2. 设置Windbg目录下的cdb.exe为默认即时调试器：
+
+2. 将Windbg目录下的cdb.exe设置为默认即时调试器：
 
 > cdb.exe -iaec "-logo c:/log.txt -c \"!load msec.dll;!exploitable -v;\""
 
@@ -58,4 +52,4 @@ You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
 * v0.1.0
 	* 解决了浏览器标签页无响应阻塞Fuzz循环继续进行的bug
 
-@PCanyi: Fuzz的关键在于好的变异引擎，有效的监控器，以及稳定的生成器。
+如果有什么bug或建议，请邮件联系@walkerfuz。

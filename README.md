@@ -14,6 +14,8 @@ You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
 ### Requirements
 
 * Python >= 3.4
+* Windbg
+* Current only for Windows
 
 ### Installation and Usage
 

@@ -11,6 +11,10 @@ You can write yourself fuzzer for morph, for example nduja, fileja, cross_fuzz.
 * 支持多种浏览器，例如IE、Chrome、Firefox等
 * 支持自定义扩展插件，比如nduja、fileja、cross_fuz
 
+### Requirements
+
+* Python >= 3.4
+
 ### Installation and Usage
 
 1.安装Windbgx86/x64和MSECExtensions !exploitable插件。

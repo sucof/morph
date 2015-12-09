@@ -1,0 +1,27 @@
+<html>
+<head>
+
+<title>Morph Fuzz Init</title>	
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<script type='text/javascript'>
+function morph_notify_href(){
+	var socket  ;
+	socket = new WebSocket('ws://%MOR_WEBSOCKET_SERVER%/');
+	socket.onopen = function(event) {
+		socket.send('%MOR_CURRENT_HREF%');
+	}
+	socket.onmessage = function(event) {
+		window.location.href = '%MOR_NEXT_HREF%';
+	}	
+}	
+
+function morph_main(){
+	morph_notify_href();
+}
+
+</script>
+	
+</head>
+<body onload="morph_main()">
+</body>
+</html>
